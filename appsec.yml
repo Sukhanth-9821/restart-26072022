@@ -1,0 +1,23 @@
+Version: 0.0
+Os; linux
+files:
+    - Source: maven-single-1.0.0.jar
+    destination: /opt/tomcat/tomcat-9/webapps
+
+hooks:
+    BeforeInstall:
+      - location: scripts/before_install.sh
+        timeout: 300
+        runas: root
+    AfterInstall:
+      - location: scripts/after_install.sh
+        timeout: 300
+        runas: root
+    ApplicationStart:
+      - location: scripts/start_server.sh
+        timeout: 300
+        runas: root
+    ApplicationStop:
+      - location: scripts/stop_server.sh
+        timeout: 300
+        runas: root
