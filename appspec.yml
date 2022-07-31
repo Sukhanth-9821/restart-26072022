@@ -1,8 +1,8 @@
 Version: 0.0
-Os; linux
+os: linux
 files:
     - Source: maven-single-1.0.0.jar
-    destination: /opt/tomcat/tomcat-9/webapps
+      destination: /opt/tomcat/tomcat-9/webapps
 
 hooks:
     BeforeInstall:
