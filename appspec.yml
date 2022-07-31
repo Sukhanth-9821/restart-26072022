@@ -1,4 +1,4 @@
-Version: 0.0
+version: 0.0
 os: linux
 files:
     - Source: maven-single-1.0.0.jar
